@@ -1,0 +1,42 @@
+<body id='page-top' data-bs-spy='scroll' data-bs-target='#mainNav' data-bs-offset='72'>
+
+    <header
+        class='text-center text-white bg-primary masthead'
+        style='background: var(--bs-indigo);--bs-primary: #18BC9C;--bs-primary-rgb: 24,188,156;color: rgb(61,61,61);'
+    >
+    </header>
+    <div class='text-center text-white copyright py-4' style='background: rgb(255,255,255);'>
+        <div class='table-responsive table mt-2' role='grid' aria-describedby='historyTable_info'>
+            <h1 style='font-size: 60px; margin-top: 50px'>Lịch sử giao dịch của {{email}}&nbsp;</h1>
+            <table class='table my-0 mt-5' id='dataTable'>
+                <thead class="table-primary">
+                    <tr>
+                        <th>Loại giao dịch</th>
+                        <th>Số tiền</th>
+                        <th>Thời gian thực hiện</th>
+                        <th>Ghi chú</th>
+                        <th>Trạng thái</th>
+                        <th>Số dư</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <ul class='people_list'>
+                        {{#each history}}
+                            <tr>
+                                <td>{{this.transType}}</td>
+                                <td>{{this.transMoney}}</td>
+                                <td>{{this.transDate}}</td>
+                                <td>{{this.transNote}}</td>
+                                <td>{{this.transStatus}}</td>
+                                <td>{{this.ballance}}</td>
+                            </tr>
+                        {{/each}}
+                    </ul>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</body>

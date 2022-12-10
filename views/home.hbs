@@ -1,0 +1,96 @@
+<body id='page-top' data-bs-spy='scroll' data-bs-target='#mainNav' data-bs-offset='72'>
+    <nav class='navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase mb-5' id='mainNav'>
+            <div class='container'><a class='navbar-brand' href='/'>Nhóm 1</a><button
+                    data-bs-toggle='collapse'
+                    data-bs-target='#navbarResponsive'
+                    class='navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded'
+                    aria-controls='navbarResponsive'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
+                ><i class='fa fa-bars'></i></button>
+                <div class='collapse navbar-collapse' id='navbarResponsive'>
+                    <ul class='navbar-nav ms-auto'>
+                        <li class='nav-item mx-0 mx-lg-1'><a
+                                class='nav-link py-3 px-0 px-lg-3 rounded'
+                                href='#portfolio'
+                            >Chức năng</a></li>
+                        <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='#about'>Về
+                                trang web</a></li>
+                        <li class='nav-item mx-0 mx-lg-1'><a
+                                class='nav-link py-3 px-0 px-lg-3 rounded'
+                                href='info/{{userEmail}}'
+                            >Thông tin tài khoản {{userEmail}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    
+    <header
+        class='text-center text-white bg-primary masthead'
+        style='background: var(--bs-indigo);--bs-primary: #18BC9C;--bs-primary-rgb: 24,188,156;color: rgb(61,61,61); padding-top:20px; padding-bottom: 20px'
+    >
+        <div class='container' style='margin-top: 72px'><img
+                class='img-fluid d-block mx-auto mb-5'
+                src='/images/User.png'
+            />
+            <h1>{{userEmail}}&nbsp;</h1>
+
+            <h2 class='font-weight-light mb-0' style='font-family: Montserrat, sans-serif;'>Chào mừng đến với web online
+                banking của nhóm 1</h2>
+        </div>
+    </header>
+
+    <section
+        id='portfolio'
+        class='portfolio'
+        style='color: var(--bs-blue);background: #ffffff;  padding-top: 1px; padding-bottom: 20px'
+    >
+        <div class='container' style='margin-top: 50px'>
+            <h2 class='text-uppercase text-center text-secondary' style='font-size: 50px;'>Chức năng</h2>
+
+            <div class='row text-center'>
+                <div class='col-md-6 col-lg-4 text-center'><a href='/addMoney/{{userEmail}}'><img src='/images/NapTien.png' />
+                        <h1 class='text-center' style='font-size: 34px;color: #2c3e50;'>Nạp tiền</h1>
+                    </a></div>
+                <div class='col-md-6 col-lg-4 text-center'><a href='/withdraw/{{userEmail}}'><img
+                            src='/images/RutTien.png'
+                        />
+                        <h1 class='text-center' style='font-size: 34px;color: #2c3e50;'>Rút tiền</h1>
+                    </a></div>
+                <div class='col-md-6 col-lg-4 text-center'><a href='/transMoney/{{userEmail}}'><img
+                            src='/images/ChuyenTien.png'
+                        />
+                        <h1 class='text-center' style='font-size: 34px;color: #2c3e50;'>Chuyển tiền</h1>
+                    </a></div>
+                <div class='col-md-6 col-lg-4 text-center'><a href='/buyCard/{{userEmail}}'><img src='/images/MuaThe.png' />
+                        <h1 class='text-center' style='font-size: 34px;color: #2c3e50;'>Mua thẻ điện thoại</h1>
+                    </a></div>
+                <div class='col-md-6 col-lg-4 text-center'><a href='/history/{{userEmail}}'><img src='/images/LichSu.png' />
+                        <h1 class='text-center' style='font-size: 34px;color: #2c3e50;'>Lịch sử giao dịch</h1>
+                    </a></div>
+            </div>
+        </div>
+    </section>
+    <section class='text-white' id='about'>
+        <div class='container'>
+            <h2 class='text-uppercase text-center text-white' style='font-size: 50px; margin-top: 24px'>Về trang web</h2>
+
+            <div class='row'>
+                <div class='col-lg-4 ms-auto'>
+                    <p class='lead'>Đây là trang web ví điện tử online cho phép người dùng giao dịch thông qua website
+                        với bảo mật cao</p>
+                </div>
+                <div class='col-lg-4 me-auto'>
+                    <p class='lead'>Thành viên nhóm:<br />Nguyễn Lưu Trí - 519H0048<br />Trương Trung Hiếu -&nbsp;
+                        519H0164<br />Trần Đức Huy - 519H0175</p>
+                </div>
+            </div>
+            <div class='text-center mt-4'></div>
+        </div>
+    </section>
+    <div class='d-lg-none scroll-to-top position-fixed rounded'><a
+            class='text-center d-block rounded text-white'
+            href='#page-top'
+        ><i class='fa fa-chevron-up'></i></a></div>
+</body>

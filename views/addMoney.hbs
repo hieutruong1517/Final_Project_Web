@@ -1,0 +1,97 @@
+<body class='bg-gradient-primary' style='background: linear-gradient(rgba(24,188,156,0.96), white);'>
+    <nav class='navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase mb-5' id='mainNav'>
+            <div class='container'><a class='navbar-brand' href='/'>Nhóm 1</a><button
+                    data-bs-toggle='collapse'
+                    data-bs-target='#navbarResponsive'
+                    class='navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded'
+                    aria-controls='navbarResponsive'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
+                ><i class='fa fa-bars'></i></button>
+                <div class='collapse navbar-collapse' id='navbarResponsive'>
+                    <ul class='navbar-nav ms-auto'>
+                        <li class='nav-item mx-0 mx-lg-1'><a
+                                class='nav-link py-3 px-0 px-lg-3 rounded'
+                                href='#portfolio'
+                            >Chức năng</a></li>
+                        <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='#about'>Về
+                                trang web</a></li>
+                        <li class='nav-item mx-0 mx-lg-1'><a
+                                class='nav-link py-3 px-0 px-lg-3 rounded'
+                                href='info/{{userEmail}}'
+                            >Thông tin tài khoản {{userEmail}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class='container'>
+        <div class='row justify-content-center'>
+            <div class='col-md-9 col-lg-12 col-xl-10'>
+                <div class='card shadow-lg o-hidden border-0 my-5'>
+                    <div class='card-body p-0'>
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <div class='p-5'>
+                                    <div class='text-center'>
+                                        <h4 class='text-dark mb-4'>Nạp tiền vào tài khoản</h4>
+                                    </div>
+                                    <form class='user' action='/addMoney/{{userEmail}}' method='post'>
+                                        <div class='mb-3'></div>
+                                        <div class='mb-3'><input
+                                                class='form-control'
+                                                type='text'
+                                                placeholder='Số thẻ '
+                                                name='creditCardNumber'
+                                            /></div>
+                                        <div class='mb-3'>
+                                            <div>
+                                                <p style='margin-bottom: 0px;color: rgb(33,37,41);'>Ngày hết hạn</p>
+                                            </div>
+                                            <div><input
+                                                    class='form-control'
+                                                    type='date'
+                                                    name='creditCardExpiration'
+                                                    style='color: rgb(33,37,41);'
+                                                /></div>
+                                        </div>
+                                        <div class='mb-3'><input
+                                                class='form-control'
+                                                type='text'
+                                                name='creditCardCVV'
+                                                placeholder='Mã CVV'
+                                                style='color: rgb(33, 37, 41);'
+                                            /></div>
+                                        <div class='mb-3'><input
+                                                class='form-control'
+                                                type='text'
+                                                name='amount'
+                                                placeholder='Số tiền muốn nạp'
+                                            /></div>
+                                        <div class='mb-3'>
+                                            <button class='btn btn-primary d-block btn-user w-100' type='submit'>
+                                                Nạp tiền
+                                            </button>
+                                        </div>
+                                        <div class='mb-3'>
+                                            {{#if sessionFlash.message}}
+                                                <div class='alert alert-danger'>
+                                                    {{sessionFlash.message}}
+                                                </div>
+                                            {{/if}}
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class='col-lg-6 d-none d-lg-flex'>
+                                <div
+                                    class='flex-grow-1 bg-login-image'
+                                    style='background: url(&quot;/images/NapTien.png&quot;) center / contain no-repeat;text-align: left;'
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

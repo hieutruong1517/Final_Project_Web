@@ -1,0 +1,48 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #18bc9c !important;
+}
+
+.col-lg-4:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
+.p1 {
+  text-align: left;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+
+.p2 {
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  text-align: left;
+}
+
+.fw-bold {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  border-radius: 20px;
+  width: 30%;
+}
+
+#mainNav {
+  background-color: #283848 !important;
+}
+
+.navbar-light .navbar-brand {
+  color: white !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.bg-primary {
+  background-color: #18bc9c !important;
+}

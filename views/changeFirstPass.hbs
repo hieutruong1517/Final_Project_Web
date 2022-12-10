@@ -1,0 +1,34 @@
+<body class="bg-gradient-primary" style="background: linear-gradient(rgba(24,188,156,0.96), white);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-12 col-xl-10">
+                <div class="card shadow-lg o-hidden border-0 my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex">
+                                <div class="flex-grow-1 bg-login-image" style="background: url(&quot;images/register.png&quot;) center / contain no-repeat;text-align: left;"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h4 class="text-dark mb-4">Đổi mật khẩu</h4>
+                                    </div>
+                                    <form class="user" method="post" action="/changeFirstPass">
+                                        <div class="mb-3"></div>
+                                        <div class="mb-3"></div>
+                                        <div class="mb-3"><input class="form-control" type="password" placeholder="Mật khẩu mới" name="password1"></div>
+                                        <div class="mb-3"><input class="form-control" type="password" placeholder="Nhập lại mật khẩu mới" name="password2"></div>
+                                        <div class="mb-3"><input class="form-control" type="hidden" name="email" id="email" value="{{email}}"></div>
+                                        <div class="mb-3">
+                                            <div class="custom-control custom-checkbox small"></div>
+                                        </div><button class="btn btn-primary d-block btn-user w-100" type="submit">Xác nhận</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

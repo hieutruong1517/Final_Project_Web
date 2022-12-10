@@ -1,0 +1,195 @@
+<body class='bg-gradient-primary' style='background: linear-gradient(rgba(24,188,156,0.96), white);'>
+    <nav class='navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase mb-5' id='mainNav'>
+            <div class='container'><a class='navbar-brand' href='/'>Nhóm 1</a><button
+                    data-bs-toggle='collapse'
+                    data-bs-target='#navbarResponsive'
+                    class='navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded'
+                    aria-controls='navbarResponsive'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
+                ><i class='fa fa-bars'></i></button>
+                <div class='collapse navbar-collapse' id='navbarResponsive'>
+                    <ul class='navbar-nav ms-auto'>
+                        <li class='nav-item mx-0 mx-lg-1'><a
+                                class='nav-link py-3 px-0 px-lg-3 rounded'
+                                href='#portfolio'
+                            >Chức năng</a></li>
+                        <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='#about'>Về
+                                trang web</a></li>
+                        <li class='nav-item mx-0 mx-lg-1'><a
+                                class='nav-link py-3 px-0 px-lg-3 rounded'
+                                href='info/{{userEmail}}'
+                            >Thông tin tài khoản {{userEmail}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class='container'>
+        <div class='row justify-content-center'>
+            <div class='col-md-9 col-lg-12 col-xl-10'>
+                <div class='card shadow-lg o-hidden border-0 my-5'>
+                    <div class='card-body p-0'>
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <div class='p-5'>
+                                    <div class='text-center'>
+                                        <h4 class='text-dark mb-4'>Mua thẻ điện thoại</h4>
+                                    </div>
+                                    <form class='user' action='/buyCard/{{email}}' method='post'>
+                                        <div class='mb-3'>
+                                            <div>
+                                                <p style='margin-bottom: 0px;color: rgb(33,37,41);font-size: 20px;'>Chọn
+                                                    nhà mạng</p>
+                                            </div>
+                                            <div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='formCheck-1'
+                                                        value='Viettel'
+                                                        name='operator'
+                                                    /><label
+                                                        class='form-check-label'
+                                                        for='formCheck-1'
+                                                    >Viettel</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='formCheck-3'
+                                                        name='operator'
+                                                        value='Mobifone'
+                                                    /><label
+                                                        class='form-check-label'
+                                                        for='formCheck-3'
+                                                    >Mobifone</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='formCheck-2'
+                                                        name='operator'
+                                                        value='Vinaphone'
+                                                    /><label
+                                                        class='form-check-label'
+                                                        for='formCheck-2'
+                                                    >Vinaphone</label></div>
+                                            </div>
+                                        </div>
+                                        <div class='mb-3'>
+                                            <div>
+                                                <p style='margin-bottom: 0px;color: rgb(33,37,41);font-size: 20px;'>Chọn
+                                                    mệnh giá</p>
+                                            </div>
+                                            <div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='formCheck-4'
+                                                        value='10000'
+                                                        name='price'
+                                                    /><label class='form-check-label' for='formCheck-4'>10.000 VND</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='formCheck-5'
+                                                        value='20000'
+                                                        name='price'
+                                                    /><label class='form-check-label' for='formCheck-5'>20.000 VND</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='formCheck-6'
+                                                        name='price'
+                                                        value='50000'
+                                                    /><label class='form-check-label' for='formCheck-6'>50.000 VND</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='formCheck-7'
+                                                        name='price'
+                                                        value='100000'
+                                                    /><label class='form-check-label' for='formCheck-7'>100.000 VND</label></div>
+
+                                            </div>
+                                            <div class='mb-3'>
+                                                <p>Phí giao dịch hiện tại là:
+                                                    <input
+                                                        style='border:none; width: 30px'
+                                                        value='0'
+                                                        name='transFee'
+                                                        placeholder='Phí giao dịch hiện tại là 0đ'
+                                                    />VND
+                                                </p>
+
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <p
+                                                        style='margin-bottom: 0px;color: rgb(33,37,41);font-size: 20px;'
+                                                    >Chọn số lượng</p>
+                                                </div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='quantity-1'
+                                                        value='1'
+                                                        name='quantity'
+                                                    /><label class='form-check-label' for='quantity-1'>1 thẻ</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='quantity-2'
+                                                        value='2'
+                                                        name='quantity'
+                                                    /><label class='form-check-label' for='quantity-2'>2 thẻ</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='quantity-3'
+                                                        name='quantity'
+                                                        value='3'
+                                                    /><label class='form-check-label' for='quantity-3'>3 thẻ</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='quantity-4'
+                                                        name='quantity'
+                                                        value='4'
+                                                    /><label class='form-check-label' for='quantity-4'>4 thẻ</label></div>
+                                                <div class='form-check form-check-inline'><input
+                                                        class='form-check-input'
+                                                        type='radio'
+                                                        id='quantity-5'
+                                                        name='quantity'
+                                                        value='5'
+                                                    /><label class='form-check-label' for='quantity-5'>5 thẻ</label></div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class='mb-3'>
+                                            <button class='btn btn-primary d-block btn-user w-100' type='submit'>Mua thẻ</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class='mb-3'>
+                                {{#if sessionFlash.message}}
+
+                                    <div class='alert alert-danger'>
+                                        {{sessionFlash.message}}
+                                    </div>
+                                {{/if}}
+                            </div>
+                            <div class='col-lg-6 d-none d-lg-flex'>
+                                <div
+                                    class='flex-grow-1 bg-login-image'
+                                    style='background: url(&quot;/images/MuaThe.png&quot;) center / contain no-repeat;text-align: left;'
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

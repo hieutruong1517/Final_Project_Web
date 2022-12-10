@@ -1,0 +1,105 @@
+<body class='bg-gradient-primary' style='background: linear-gradient(rgba(24,188,156,0.96), white);'>
+    <nav class='navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase mb-5' id='mainNav'>
+            <div class='container'><a class='navbar-brand' href='/'>Nhóm 1</a><button
+                    data-bs-toggle='collapse'
+                    data-bs-target='#navbarResponsive'
+                    class='navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded'
+                    aria-controls='navbarResponsive'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
+                ><i class='fa fa-bars'></i></button>
+                <div class='collapse navbar-collapse' id='navbarResponsive'>
+                    <ul class='navbar-nav ms-auto'>
+                        <li class='nav-item mx-0 mx-lg-1'><a
+                                class='nav-link py-3 px-0 px-lg-3 rounded'
+                                href='#portfolio'
+                            >Chức năng</a></li>
+                        <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='#about'>Về
+                                trang web</a></li>
+                        <li class='nav-item mx-0 mx-lg-1'><a
+                                class='nav-link py-3 px-0 px-lg-3 rounded'
+                                href='info/{{userEmail}}'
+                            >Thông tin tài khoản {{userEmail}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class='container'>
+        <div class='row justify-content-center'>
+            <div class='col-md-9 col-lg-12 col-xl-10'>
+                <div class='card shadow-lg o-hidden border-0 my-5'>
+                    <div class='card-body p-0'>
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <div class='p-5'>
+                                    <div class='text-center'>
+                                        <h4 class='text-dark mb-4'>Chuyển tiền</h4>
+                                    </div>
+                                    <form class='user' action='/transMoney/{{email}}' method='post'>
+                                        <div class='mb-3'></div>
+                                        <div class='mb-3'><input
+                                                class='form-control'
+                                                type='text'
+                                                placeholder='Mail người nhận'
+                                                name='email'
+                                            /></div>
+                                        <div class='mb-3'><input
+                                                class='form-control'
+                                                type='text'
+                                                placeholder='Số điện thoại người nhận'
+                                                name='phoneNumber'
+                                            /></div>
+                                        <div class='mb-3'><input
+                                                class='form-control'
+                                                type='text'
+                                                name='transMoney'
+                                                placeholder='Số tiền muốn chuyển'
+                                            /></div>
+                                        <div class='mb-3'><input
+                                                class='form-control'
+                                                type='text'
+                                                placeholder='Ghi chú'
+                                                name='note'
+                                                style='color: rgb(33, 37, 41);'
+                                            /></div>
+                                        <div class='mb-3'>
+                                            <input
+                                                class='form-check-input'
+                                                type='radio'
+                                                name='feeBearer'
+                                                id='flexRadioDefault1'
+                                            />
+                                            <label class='form-check-label' for='flexRadioDefault1'>
+                                                Người gửi chịu phí
+                                            </label>
+                                        </div>
+                                        <div class='form-check'>
+                                            <input
+                                                class='form-check-input'
+                                                type='radio'
+                                                name='feeBearer'
+                                                id='flexRadioDefault2'
+                                                checked
+                                            />
+                                            <label class='form-check-label' for='flexRadioDefault2'>
+                                                Người nhận chịu phí
+                                            </label>
+                                        </div>
+                                        <button class='btn btn-primary d-block btn-user w-100' type='submit'>Chuyển tiền</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <div class='col-lg-6 d-none d-lg-flex'>
+                                <div
+                                    class='flex-grow-1 bg-login-image'
+                                    style='background: url(&quot;/images/ChuyenTien.png&quot;) center / contain no-repeat;text-align: left;'
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

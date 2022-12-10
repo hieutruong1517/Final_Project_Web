@@ -1,0 +1,72 @@
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="/">Nhóm 1</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="home.hbs">Chức năng</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"></li>
+                    <li class="nav-item mx-0 mx-lg-1"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center text-white bg-primary masthead" style="background: var(--bs-indigo);--bs-primary: #18BC9C;--bs-primary-rgb: 24,188,156;color: rgb(61,61,61);border-style: none;">
+        <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="images/User.png" style="margin: 0px;margin-bottom: 17px;">
+            <h1 style="font-size: 36px;">Thông tin tài khoản</h1>
+            <div></div>
+            <div>
+                <p style="text-align: left;font-family: Montserrat, sans-serif;font-size: 24px;margin-bottom: 0px;">Họ và tên:</p>
+                <div>
+                    <p style="font-family: Montserrat, sans-serif;font-size: 24px;text-align: left;">{{user.fullname}}</p>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: left;font-family: Montserrat, sans-serif;font-size: 24px;margin-bottom: 0px;">Số điện thoại:</p>
+                <div>
+                    <p style="font-family: Montserrat, sans-serif;font-size: 24px;text-align: left;">{{user.phone}}</p>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: left;font-family: Montserrat, sans-serif;font-size: 24px;margin-bottom: 0px;">Email:</p>
+                <div>
+                    <p style="font-family: Montserrat, sans-serif;font-size: 24px;text-align: left;">{{user.email}}</p>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: left;font-family: Montserrat, sans-serif;font-size: 24px;margin-bottom: 0px;">Địa chỉ:</p>
+                <div>
+                    <p style="font-family: Montserrat, sans-serif;font-size: 24px;text-align: left;">{{user.address}}</p>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: left;font-family: Montserrat, sans-serif;font-size: 24px;margin-bottom: 0px;">Ngày sinh:</p>
+                <div>
+                    <p style="font-family: Montserrat, sans-serif;font-size: 24px;text-align: left;">{{date}}</p>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: left;font-family: Montserrat, sans-serif;font-size: 24px;margin-bottom: 8px;">CMND:</p>
+                <div></div>
+                <div class="row">
+                    <div class="col-lg-4 ms-auto">
+                        <div><img src="{{user.frontImg}}" style="max-width: 90%;"></div>
+                    </div>
+                    <div class="col-lg-4 me-auto">
+                        <div><img src="{{user.backImg}}" style="max-width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: left;font-family: Montserrat, sans-serif;font-size: 24px;margin-bottom: 0px;">Trạng thái:</p>
+                <div>
+                    <p style="font-family: Montserrat, sans-serif;font-size: 24px;text-align: left;">Đã kích hoạt</p>
+                </div>
+            </div>
+            <hr class="star-light">
+            <div style="padding-bottom: 10px;"><a class="btn btn-primary fw-bold" role="button" style="background: rgb(255,255,255);color: rgb(0,0,0);font-family: Montserrat, sans-serif;font-size: 30px;border-radius: 20px;" href="/changePass/{{user.email}}">Đổi mật khẩu</a></div>
+            <div><button class="btn btn-primary fw-bold" type="button" style="background: rgb(255,255,255);color: rgb(0,0,0);font-family: Montserrat, sans-serif;font-size: 30px;border-radius: 20px;">Đăng xuất</button></div>
+        </div>
+    </header>
+    <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="text-center d-block rounded text-white" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+</body>
+
