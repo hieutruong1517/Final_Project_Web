@@ -457,9 +457,9 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 // xử lý upload căn cước công dân
-// upload.array('photos', 2): với photos là phần name của nơi up file ảnh: vd <input id="..." name="photos">
+// upload.array('cmndPhotos', 2): với cmndPhotos là phần name của nơi up file ảnh: vd <input id="..." name="cmndPhotos">
 // số 2 là số ảnh tối đa được upload
-router.post('/uploadImg', upload.array('photos', 2), (req, res) => {
+router.post('/uploadImg', upload.array('cmndPhotos', 2), (req, res) => {
     // ảnh mặt trước
     var frontImg = {
         data: fs.readFileSync(path.join(__dirname, '..', 'uploads', req.files[0].filename)), // đọc vị trí lưu ảnh

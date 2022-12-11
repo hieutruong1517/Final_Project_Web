@@ -22,17 +22,17 @@
                                             <div>
                                                 <p style="margin-bottom: 0px;">Upload ảnh CMND</p>
                                             </div>
-                                            <div><input class="form-control" type="file" name="cmnd" id="cmnd"
+                                            <div><input class="form-control" type="file" name="cmndPhotos" id="cmndPhotos"
                                                     accept="image/*"></div>
 
                                         </div>
-                                        <div class="mb-3">
+                                        {{!-- <div class="mb-3">
                                             <div>
                                                 <p style="margin-bottom: 0px;">Mặt sau CMND</p>
                                             </div>
                                             <div><input class="form-control" type="file" name="files" id="files"
                                                     accept="image/*"></div>
-                                        </div>
+                                        </div> --}}
                                         <div class="mb-3">
                                             <div class="custom-control custom-checkbox small"></div>
                                         </div>
@@ -58,8 +58,8 @@
             const files = document.getElementById("cmnd");      // lấy files dựa vào Id
             const formData = new FormData();        // form data chứa các dữ liệu trong form
             formData.append("email", email.value);
-            formData.append("cmnd", files.files[0])
-            formData.append("cmnd", files.files[0])
+            formData.append("cmndPhotos", files.files[0])
+            formData.append("cmndPhotos", files.files[0])
             
             fetch("http://localhost:3000/user/uploadImg", {      // fetch api uploadImg để xử lý việc lưu ảnh vào db
                 method: 'POST',
